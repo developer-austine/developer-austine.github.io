@@ -632,6 +632,7 @@ form .textarea-field .error-txt {
 }
 
 .footer-iconTop a:hover {
+    transform: scale(1.2);
     box-shadow: 0 0 1rem var(--main-color);
 }
 

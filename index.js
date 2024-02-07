@@ -1,3 +1,12 @@
+/* =====================================Preloader design=================================== */
+const loaderContainer = document.querySelector(".loader-container");
+const pageContent = document.querySelector("#page-content");
+
+window.addEventListener("load", () => {
+    loaderContainer.classList.add("hidden");
+    pageContent.classList.add("visible");
+});
+
 /* =====================================Toggle Icon NavbarS=================================== */
 let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector("navbar");
@@ -46,8 +55,9 @@ menuIcon.classList.remove("bx-x");
 navbar.classList.remove("active");
 
 /* ===================================== Scroll reveal=================================== */
+
 ScrollReveal({
-     //reset: true,
+    reset: true,
     distance: "80px",
     duration: 2000,
     delay: 200,
@@ -74,59 +84,6 @@ const typed = new Typed(".multiple-text", {
     backDelay: 1000,
     loop: true,
 });
-
-/* =====================================Working active Contact Form =================================== */
-
-// const form = document.querySelector("form");
-
-// function sendEmail() {
-//     const bodyMessage =
-//         "Full Name: ${fullName.value}<br> Email: ${eMail.value} <br> Phone Number: ${phoneNumber.value} <br> Message: ${message.value}";
-
-//     Email.send({
-//         Host: "smtp.elasticemail.com",
-//         Username: "username",
-//         Passsword: "password",
-//         To: "austinealex@gmail.com",
-//         From: "",
-//         Subject: "subject.value",
-//         Body: "bodyMessage",
-//     }).then((message) => {
-//         if (message == "OK") {
-//             swal.fire({
-//                 title: "Success",
-//                 text: "Message sent successfully!",
-//                 icon: "Success!",
-//             });
-//         }
-//     });
-// }
-
-// function checkInputs() {
-//     const items = document.querySelectorAll(".items");
-//     for (const item of items) {
-//         if (item.value == "") {
-//             item.classList.add("error");
-//             item.parentElement.classList.add("error");
-//         }
-//         item.addEventListener("keyup", () => {
-//             if (item.value != "") {
-//                 item.classList.remove("error");
-//                 item.parentElement.classList.remove("error");
-//             } else {
-//                 item.classList.add("error");
-//                 item.parentElement.classList.add("error");
-//             }
-//         });
-//     }
-// }
-
-// form.addEventListener("submit", (e) => {
-//     e.preventDefault();
-//     checkInputs();
-
-// Send email ()
-// });
 
 /* =====================================Working2 active Contact Form =================================== */
 
